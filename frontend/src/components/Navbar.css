@@ -1,0 +1,54 @@
+.navbar{
+    width: 350px;
+    height: 100vh;
+    border: 2px solid #202123;
+    background-color: #202123;
+}
+
+
+.button{
+    border-radius: 10px;
+    background-color: #202123;
+    margin-top: 6px;
+    margin-left: 4px;
+    width: 70%;
+    height: 50px;
+    font-size: 15px;
+    color: white;
+    text-align: left;
+    border-color: white;
+    border-width: 0.25px;
+}
+
+.squarebutton{
+    width: 50px;
+    border-radius: 10px;
+    height: 50px;
+    color: white;
+    background-color: white;
+    border-width: 0.25px;
+    margin-top: 6px;
+    margin-left: 4px;
+    background-color: #202123;
+    border-color: white;
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+.buttonga{
+    margin-top: 150%;
+    color: white;
+}
+
+.upgradeButton{
+    background-color: #202123;
+    border: none;
+    margin-left: 20%;
+    margin-top: 6%;
+    font-size: 20px;
+}
+
+.user{
+    margin-left: 32%;
+    margin-bottom: 25%;
+}
