@@ -13,5 +13,5 @@ class SearchViewSet(viewsets.ModelViewSet):
         return super().get_queryset()#.filter(user=self.request.user)
     
     def perform_create(self, serializer):
-        serializer.save(user=User.objects.get(1))#self.request.user)
+        serializer.save(user=User.objects.get(id=1))#self.request.user)
 # Create your views here.
