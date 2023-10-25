@@ -26,10 +26,12 @@
     color: rgb(32, 37, 191);
     align-self: flex-end;
     text-align: right;
+    background-color: #646D74;
 }
 
 .message[by="bot"]{
     color: rgb(10, 168, 115);
     align-self: flex-start;
+    background-color: #808A93;
 
 }

@@ -42,7 +42,7 @@
 
   .messagearea{
     /* align-items: center; */
-    border: white solid 2px;
+    border: none;
     margin-top: 1%;
     margin-left: 5%;
     width: 90%;
@@ -61,5 +61,5 @@
   .tujamazaa{
     display: flex;
     flex-direction: column;
-    
+
   }
