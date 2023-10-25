@@ -3,23 +3,52 @@ import "./TextArea.css"
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import Message from "./Message";
+import axios from "axios";
 
 export default function TextArea() {
 
 
-const [text, setText] = useState('');
+const [text, setText] = useState({
+    search_data:'',
+});
       
 const handleTextareaChange = (e) => {
-    setText(e.target.value);
- };
+    const { id, value } = e.target;
+    // console.log(value);
+    setText((prevText) => (
+        // value
+        {
+      ...prevText,
+      [id]: value,
+    }
+    ));
+  };
+
+const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(text);
+    axios.post("api/search/",text)
+    .then(res =>
+        {window.location.href='/'}
+    )
+    .catch(err => console.log(err));
+}
 
     return(
     <div className="textarea">
-        <input type="text" placeholder="type your text here" className="input" onChange={handleTextareaChange}
-        value={text} />
-        <button className="ad">
-            <FontAwesomeIcon icon={faPaperPlane} />
-        </button>
+        <div className="messagearea">
+            <div className="tujamazaa">
+                <Message/>
+            </div>
+        </div>
+        <div className="inputbutton">
+            <input type="text" id='search_data' placeholder="type your text here" className="input" onChange={handleTextareaChange}
+            value={text.search_data} />
+            <button onClick={handleSubmit} className="ad">
+                <FontAwesomeIcon icon={faPaperPlane} />
+            </button>
+        </div>
     </div>
 
     )

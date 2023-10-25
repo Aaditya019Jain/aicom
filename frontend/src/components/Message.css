@@ -1,0 +1,35 @@
+.message{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(32, 37, 191);
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    vertical-align: top;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    width: 600px;
+    height: 70px;
+    overflow-y: scroll;
+}
+
+.message[by="user"]{
+    color: rgb(32, 37, 191);
+    align-self: flex-end;
+    text-align: right;
+}
+
+.message[by="bot"]{
+    color: rgb(10, 168, 115);
+    align-self: flex-start;
+
+}
