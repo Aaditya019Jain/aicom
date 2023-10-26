@@ -46,17 +46,17 @@ axios.get('api/search/')
 
 }).catch((error) => {
     console.log(error);
-
 })},[]);
 
     return(
     <div className="textarea">
         <div className="messagearea">
-        {message.map((message,index) =>{
+        {message.map((message,index) =>(
+            console.log(message.search_data),
             <div className="tujamazaa" key ={index} >
                 <Message bot={message.search_data} user={text.search_data}/>
             </div>
-        })}
+        ))}
         </div>
         <div className="inputbutton">
             <input type="text" id='search_data' placeholder="type your text here" className="input" onChange={handleTextareaChange}
