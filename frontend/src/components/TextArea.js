@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import Message from "./Message";
 import axios from "axios";
+import { useEffect } from "react";
 
 export default function TextArea() {
 
@@ -27,7 +28,7 @@ const handleTextareaChange = (e) => {
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(text);
+    // console.log(text);
     axios.post("api/search/",text)
     .then(res =>
         {window.location.href='/'}
@@ -35,12 +36,27 @@ const handleSubmit = (e) => {
     .catch(err => console.log(err));
 }
 
+const[message, setMessage] = useState([]);
+
+useEffect(() => {
+axios.get('api/search/')
+.then((response) => {      
+    console.log(response.data);
+    setMessage(response.data);
+
+}).catch((error) => {
+    console.log(error);
+
+})},[]);
+
     return(
     <div className="textarea">
         <div className="messagearea">
-            <div className="tujamazaa">
-                <Message/>
+        {message.map((message,index) =>{
+            <div className="tujamazaa" key ={index} >
+                <Message bot={message.search_data} user={text.search_data}/>
             </div>
+        })}
         </div>
         <div className="inputbutton">
             <input type="text" id='search_data' placeholder="type your text here" className="input" onChange={handleTextareaChange}
