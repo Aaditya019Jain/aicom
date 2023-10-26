@@ -41,7 +41,7 @@ const[message, setMessage] = useState([]);
 useEffect(() => {
 axios.get('api/search/')
 .then((response) => {      
-    console.log(response.data);
+    // console.log(response.data);
     setMessage(response.data);
 
 }).catch((error) => {
