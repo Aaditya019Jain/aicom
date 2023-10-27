@@ -28,7 +28,7 @@ const handleTextareaChange = (e) => {
 
 const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(text);
+    console.log(text);
     axios.post("api/search/",text)
     .then(res =>
         {window.location.href='/'}
@@ -52,9 +52,9 @@ axios.get('api/search/')
     <div className="textarea">
         <div className="messagearea">
         {message.map((message,index) =>(
-            console.log(message.search_data),
+            console.log(text),
             <div className="tujamazaa" key ={index} >
-                <Message bot={message.search_data} user={text.search_data}/>
+                <Message bot={message.search_data} user={message.search_data}/>
             </div>
         ))}
         </div>

@@ -24,14 +24,16 @@
 
 .message[by="user"]{
     color: rgb(32, 37, 191);
-    align-self: flex-end;
+    /* align-self: flex-start; */
+    margin-left: 10%;
     text-align: right;
     background-color: #646D74;
 }
 
 .message[by="bot"]{
     color: rgb(10, 168, 115);
-    align-self: flex-start;
+    /* align-self: flex-end; */
+    margin-right: 10%;
     background-color: #808A93;
 
 }

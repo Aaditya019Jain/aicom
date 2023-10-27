@@ -5,6 +5,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    /* border-color: white bold 2px; */
     /* flex-direction: row; */
     /* align-items: center; */
 }
@@ -43,8 +44,7 @@
   .messagearea{
     /* align-items: center; */
     border: none;
-    margin-top: 1%;
-    margin-left: 5%;
+    align-self: center;
     width: 90%;
     height: 85%;
     overflow-y: scroll;
