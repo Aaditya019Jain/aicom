@@ -49,6 +49,9 @@ const[message, setMessage] = useState([]);
 
     return(
     <div className="textarea">
+        <div className="bar">
+
+        </div>
         <div className="messagearea">
         {message.map((message,index) =>(
             console.log(text),
