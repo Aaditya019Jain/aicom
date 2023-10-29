@@ -31,22 +31,21 @@ const handleSubmit = (e) => {
     console.log(text);
     axios.post("api/search/",text)
     .then(res =>
-        {window.location.href='/'}
+        console.log("hello")
     )
     .catch(err => console.log(err));
-}
-
-const[message, setMessage] = useState([]);
-
-useEffect(() => {
-axios.get('api/search/')
+    axios.get('api/search/')
 .then((response) => {      
     // console.log(response.data);
     setMessage(response.data);
 
 }).catch((error) => {
     console.log(error);
-})},[]);
+})
+}
+
+const[message, setMessage] = useState([]);
+
 
     return(
     <div className="textarea">

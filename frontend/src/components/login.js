@@ -36,7 +36,16 @@ export default function Login(){
                     </button>
                 </div>
                 <a href='/textarea'className="loginbutton">Sign In</a>
+                <div className="extrabuttons">
+                    <button className="hover-underline">
+                        Forgot Password?
+                    </button>
+                    <button className="hover-underline">
+                        Sign Up
+                    </button>
+                </div>
             </div>
+            
         </div>
     )
 }
