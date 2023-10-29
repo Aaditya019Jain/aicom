@@ -18,6 +18,9 @@ export default function Login(){
     return (
         <div className="loginpage">
             <div className="loginbox">
+                <div className="titlebox">
+                    <h1 className="shine-effect">Insti GPT</h1>
+                </div>
                 <div className="inputusericon">
                     <FontAwesomeIcon icon={faUser} color="black"/>
                     <input type="text" placeholder="Username" className="logininput"/>
@@ -28,7 +31,7 @@ export default function Login(){
                     type={showPassword ? 'text' : 'password'}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)} placeholder="Password" className="logininput"/>
-                    <button onClick={togglePasswordVisibility}>
+                    <button onClick={togglePasswordVisibility}className="eyebutton">
                         <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
                     </button>
                 </div>

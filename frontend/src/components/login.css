@@ -52,3 +52,19 @@
     margin-bottom: 10px;
     padding-left: 10px;
 }
+
+.shine-effect {
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: text-shadow 0.3s ease;
+  }
+  
+.eyebutton{
+    font-size: 18px;
+    border: none;
+    background-color: white;
+}
+
+
