@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: white;
+    background-color: #fff;
     border-radius: 10px;
     width: 30%;
     height: 50%;
@@ -29,4 +29,16 @@
     border: 1px solid #40414f;
     margin-bottom: 10px;
     padding-left: 10px;
+}
+
+.loginbutton{
+    width: 50%;
+    height: 4vh;
+    border: solid 2px #50515f;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    background-color: #50515f;
+    border-radius: 5px;
+    text-decoration: none;
 }

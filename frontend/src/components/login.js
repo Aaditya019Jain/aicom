@@ -7,7 +7,7 @@ export default function Login(){
             <div className="loginbox">
                 <input type="text" placeholder="Username" className="logininput"/>
                 <input type="text" placeholder="Password" className="logininput"/>
-                <a href='/textarea'>Login</a>
+                <a href='/textarea'className="loginbutton">Sign In</a>
             </div>
         </div>
     )
